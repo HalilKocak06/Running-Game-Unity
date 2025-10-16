@@ -13,34 +13,39 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
-        SpawnChunks();
+        SpawnStartingChunks();
     }
 
-    private void SpawnChunks()
+    private void SpawnStartingChunks()
     {
         for (int i = 0; i < startingChunksAmount; i++)
         {
-            float spawnPositionZ = CalculateSpawnPositionZ(i);
-
-            Vector3 chunkSpawnPos = new Vector3(transform.position.x, transform.position.y, spawnPositionZ); //XveY sabit Z ileri kayıyor.
-            GameObject newChunk = Instantiate(chunkPrefab, chunkSpawnPos, Quaternion.identity, chunkParent);
-
-            chunks.Add(newChunk);
+            SpawnChunk();
         }
     }
 
-    private float CalculateSpawnPositionZ(int i)
+    private void SpawnChunk()
+    {
+        float spawnPositionZ = CalculateSpawnPositionZ();
+
+        Vector3 chunkSpawnPos = new Vector3(transform.position.x, transform.position.y, spawnPositionZ); //XveY sabit Z ileri kayıyor.
+        GameObject newChunk = Instantiate(chunkPrefab, chunkSpawnPos, Quaternion.identity, chunkParent);
+
+        chunks.Add(newChunk);
+    }
+
+    private float CalculateSpawnPositionZ()
     {
         float spawnPositionZ;
 
-        if (i == 0)
+        if (chunks.Count == 0)
         {
             spawnPositionZ = transform.position.z;
         }
         else
         {
 
-            spawnPositionZ = transform.position.z + (i * chunkLength);
+            spawnPositionZ = chunks[chunks.Count - 1].transform.position.z + chunkLength;
         }
 
         return spawnPositionZ;
@@ -62,6 +67,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 chunks.Remove(chunk);
                 Destroy(chunk);
+                SpawnChunk();
             }
         }
     }
