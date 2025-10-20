@@ -1241,6 +1241,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4205125329836811622, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
+      propertyPath: 'lanes.Array.data[0]'
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4205125329836811622, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
+      propertyPath: 'lanes.Array.data[1]'
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4205125329836811622, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
+      propertyPath: 'lanes.Array.data[2]'
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 158082474181941655, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
       propertyPath: m_Name
       value: Chunk Prefab
