@@ -1242,24 +1242,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4205125329836811622, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
-      propertyPath: coinPrefab
-      value: 
-      objectReference: {fileID: 4984353731688793408, guid: 4f5dd583e2eeac74a9a3f07302162a4e, type: 3}
-    - target: {fileID: -4205125329836811622, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
       propertyPath: applePrefab
       value: 
-      objectReference: {fileID: 6232307814707342416, guid: f7de57a6afaac20459f7e0eb5127306f, type: 3}
+      objectReference: {fileID: 249947528971889350, guid: b1c094786cae5554f9f9ea5d0f449c11, type: 3}
     - target: {fileID: -4205125329836811622, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
       propertyPath: 'lanes.Array.data[0]'
-      value: -1.8
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -4205125329836811622, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
       propertyPath: 'lanes.Array.data[1]'
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4205125329836811622, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
       propertyPath: 'lanes.Array.data[2]'
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 158082474181941655, guid: 5d86f76d670cfa3428a5ed9abb02beea, type: 3}
       propertyPath: m_Name
