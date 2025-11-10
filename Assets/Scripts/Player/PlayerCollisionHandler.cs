@@ -21,7 +21,7 @@ public class PlayerCollisionHandler : MonoBehaviour
         cooldownTimer += Time.deltaTime;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision other)
     {
         if (cooldownTimer < collisionCooldown) return;
 

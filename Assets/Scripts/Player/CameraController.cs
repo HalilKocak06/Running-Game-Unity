@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    [SerializeField] ParticleSystem speedUpParticleSystem;
     [SerializeField] float minFOV = 20f;
     [SerializeField] float maxFOV = 120f;
     [SerializeField] float zoomDuration = 1f;
@@ -18,6 +19,11 @@ public class CameraController : MonoBehaviour
     {
         StopAllCoroutines(); // Eğer daha önce bir zoom işlemi başlatıldıysa onu keser.
         StartCoroutine(ChangeFOVRoutine(speedAmount)); //StartCoroutine = bir işlemi zamana yayar.
+
+        if ( speedAmount > 0)
+        {
+            speedUpParticleSystem.Play(); //Particle system'i çalıştırır.
+        }
     }
     
     IEnumerator ChangeFOVRoutine(float speedAmount) //BU çok kullanılan bir method . Bunu sindir.
