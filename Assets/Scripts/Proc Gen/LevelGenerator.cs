@@ -11,7 +11,7 @@ public class LevelGenerator : MonoBehaviour
 
     [Header("Level Settings")]
     [Tooltip("The amount of chunks we start with")]
-    [SerializeField] int startingChunksAmount = 12; //oyunun başında kaç adet ile başlayacağını gösterir.
+    [SerializeField] int startingChunksAmount = 6; //oyunun başında kaç adet ile başlayacağını gösterir.
     [Tooltip("Do not change chunk length value unless chunk prefab size reflects change")]
     [SerializeField] float chunkLength = 10f; //her yol parçasının uzunluğu
     [SerializeField] float moveSpeed = 8f;

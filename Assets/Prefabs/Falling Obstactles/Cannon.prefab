@@ -72,7 +72,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 242050089278283653, guid: 184b3dddfffb80a428a260ef25da1030, type: 3}
       propertyPath: m_Name
-      value: Bank
+      value: Cannon
       objectReference: {fileID: 0}
     - target: {fileID: 3945291753585433562, guid: 184b3dddfffb80a428a260ef25da1030, type: 3}
       propertyPath: m_LocalPosition.x
@@ -127,6 +127,10 @@ PrefabInstance:
       value: 1.83
       objectReference: {fileID: 0}
     - target: {fileID: 4593998400057519614, guid: 184b3dddfffb80a428a260ef25da1030, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593998400057519614, guid: 184b3dddfffb80a428a260ef25da1030, type: 3}
       propertyPath: m_Center.x
       value: 0.82
       objectReference: {fileID: 0}
@@ -137,6 +141,18 @@ PrefabInstance:
     - target: {fileID: 4593998400057519614, guid: 184b3dddfffb80a428a260ef25da1030, type: 3}
       propertyPath: m_Center.z
       value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593998400057519614, guid: 184b3dddfffb80a428a260ef25da1030, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610969953151062147, guid: 184b3dddfffb80a428a260ef25da1030, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610969953151062147, guid: 184b3dddfffb80a428a260ef25da1030, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
