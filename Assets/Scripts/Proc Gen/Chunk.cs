@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Chunk : MonoBehaviour
 {
@@ -14,12 +15,21 @@ public class Chunk : MonoBehaviour
 
     List<int> availableLanes = new List<int> { 0, 1, 2 };
 
+    LevelGenerator levelGenerator;
+    ScoreManager scoreManager;
+
 
     void Start()
     {
         SpawnFences();
         SpawnApple();
         SpawnCoin();
+    }
+
+    public void Init(LevelGenerator levelGenerator, ScoreManager scoreManager)
+    {
+        this.levelGenerator = levelGenerator;
+        this.scoreManager = scoreManager;
     }
 
     void SpawnFences()
@@ -49,8 +59,8 @@ public class Chunk : MonoBehaviour
         int selectedLane = SelectLane();
 
         Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y, transform.position.z);
-        Instantiate(applePrefab, spawnPosition, Quaternion.identity, this.transform);
-
+        Apple newApple = Instantiate(applePrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Apple>();
+        newApple.Init(levelGenerator);
     }
     
     void SpawnCoin()
@@ -68,7 +78,8 @@ public class Chunk : MonoBehaviour
         {
             float spawnPositionZ = topOfChunkZPos - (i * coinSeperationLength);
             Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y, spawnPositionZ);
-            Instantiate(coinPrefab, spawnPosition, Quaternion.identity, this.transform);
+            Coin newCoin = Instantiate(coinPrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Coin>();
+            newCoin.Init(scoreManager);
         }
 
         
